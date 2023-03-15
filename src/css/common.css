@@ -16,3 +16,37 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.nav__list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.nav__link {
+  text-decoration: none;
+
+  max-width: 150px;
+  padding: 8px 12px;
+
+  border-radius: 10px;
+
+  background-color: #e1f6de;
+  text-shadow: 1px 1px 0 #fff;
+
+  font-size: 16px;
+  font: inherit;
+  font-weight: bold;
+
+  color: #07431f;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.nav__link:hover {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+
+.nav__link:active {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}

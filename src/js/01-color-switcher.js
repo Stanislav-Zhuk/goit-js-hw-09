@@ -1,18 +1,29 @@
-// Завдання 1 - перемикач кольорів
+// get access to elements
+const startBtn = document.querySelector('[data-start]');
+const stopBtn = document.querySelector('[data-stop]');
+let timerId = null;
 
-// Виконуй це завдання у файлах 01-color-switcher.html і 01-color-switcher.js. Подивися демо-відео роботи перемикача.
-// HTML містить кнопки «Start» і «Stop».
+// function to generate a random color
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
 
-// <button type="button" data-start>Start</button>
-// <button type="button" data-stop>Stop</button>
+// function to event handler startBtn
+function onStart() {
+  timerId = setInterval(() => {
+    document.body.style.backgroundColor = getRandomHexColor();
+  }, 1000);
+  stopBtn.disabled = false;
+  startBtn.disabled = true;
+}
 
-// Напиши скрипт, який після натискання кнопки «Start», раз на секунду змінює колір фону <body> на випадкове значення, використовуючи інлайн стиль. Натисканням на кнопку «Stop» зміна кольору фону повинна зупинятися.
+// function to event handler stoptBtn
+function onStop() {
+  startBtn.disabled = false;
+  clearInterval(timerId);
+  timerId = null;
+}
 
-// УВАГА
-// Враховуй, що на кнопку «Start» можна натиснути нескінченну кількість разів. Зроби так, щоб доки зміна теми запущена, кнопка «Start» була неактивною (disabled).
-
-// Для генерування випадкового кольору використовуй функцію getRandomHexColor.
-
-// function getRandomHexColor() {
-//   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-// }
+// add event listeners
+startBtn.addEventListener('click', onStart);
+stopBtn.addEventListener('click', onStop);

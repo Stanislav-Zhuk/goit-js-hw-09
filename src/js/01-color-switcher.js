@@ -20,8 +20,8 @@ function onStart() {
 // function to event handler stoptBtn
 function onStop() {
   startBtn.disabled = false;
+  stopBtn.disabled = true;
   clearInterval(timerId);
-  timerId = null;
 }
 
 // add event listeners

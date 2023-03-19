@@ -19,7 +19,7 @@ img {
 
 .nav__list {
   list-style: none;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .nav__link {
@@ -30,23 +30,57 @@ img {
 
   border-radius: 10px;
 
-  background-color: #e1f6de;
+  background-color: #d9e5fc;
   text-shadow: 1px 1px 0 #fff;
 
   font-size: 16px;
   font: inherit;
   font-weight: bold;
 
-  color: #07431f;
-  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  color: #0f1d4e;
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
 
-.nav__link:hover {
-  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+.nav__link:hover,
+.nav__link:focus {
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
 }
 
-.nav__link:active {
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+button[data-start],
+button[data-stop] {
+  display: inline-block;
+
+  max-width: 150px;
+  padding: 8px 12px;
+  margin-top: 30px;
+  margin-right: 30px;
+
+  border-radius: 10px;
+  border: transparent;
+
+  background-color: #d9e5fc;
+  text-shadow: 1px 1px 0 #fff;
+
+  font-size: 16px;
+  font: inherit;
+  font-weight: bold;
+
+  color: #0f1d4e;
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+button[data-start]:hover,
+button[data-stop]:hover,
+button[data-start]:focus,
+button[data-stop]:focus {
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+}
+
+button[disabled] {
+  background-color: #ebecf0;
+  color: #61677c;
 }

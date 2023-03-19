@@ -17,6 +17,7 @@ img {
   max-width: 100%;
 }
 
+/* general */
 .nav__list {
   list-style: none;
   margin-bottom: 30px;
@@ -48,6 +49,7 @@ img {
   box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
 }
 
+/* task-01 (color switcher) */
 button[data-start],
 button[data-stop] {
   display: inline-block;
@@ -88,6 +90,7 @@ button[data-stop] {
   margin-left: 30px;
 }
 
+/* task-02 (timer) */
 .timer {
   display: flex;
   gap: 15px;
@@ -138,4 +141,82 @@ button[data-stop] {
   text-align: center;
 
   color: #0f1d4e;
+}
+
+/* task-03 (promises) */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 470px;
+  padding: 40px;
+
+  font-size: 16px;
+  font: inherit;
+  font-weight: bold;
+  text-align: center;
+
+  color: #0f1d4e;
+  background-color: #d9e5fc;
+  text-shadow: 1px 1px 0 #fff;
+  border: 0 solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form:hover {
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+}
+
+.form > label {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.form > button {
+  padding: 8px 12px;
+  margin-top: 30px;
+
+  border-radius: 10px;
+  border: transparent;
+
+  text-shadow: 1px 1px 0 #fff;
+
+  font-size: 16px;
+  font: inherit;
+  font-weight: bold;
+
+  color: #0f1d4e;
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.form > button:hover,
+.form > button:focus {
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+}
+
+label > input {
+  padding: 8px;
+
+  font-size: 16px;
+  font: inherit;
+  font-weight: bold;
+  text-align: center;
+
+  color: #0f1d4e;
+  text-shadow: 1px 1px 0 #fff;
+  outline: transparent;
+  border: 0 solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+label > input:hover,
+label > input:focus {
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
 }

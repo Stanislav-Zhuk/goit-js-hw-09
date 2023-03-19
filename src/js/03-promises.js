@@ -52,4 +52,6 @@ function onSubmit(event) {
         });
       });
   }
+  
+  form.reset()
 }

@@ -100,8 +100,6 @@ button[data-stop] {
 }
 
 #datetime-picker {
-  position: relative;
-  left: 10px;
   margin-right: 20px;
   padding: 8px 12px;
 

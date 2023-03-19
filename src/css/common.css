@@ -117,6 +117,15 @@ button[data-stop] {
   cursor: pointer;
 }
 
+#datetime-picker:hover {
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+}
+
+#datetime-picker[disabled] {
+  background-color: #ebecf0;
+  color: #61677c;
+}
+
 .field {
   display: flex;
   flex-direction: column;
